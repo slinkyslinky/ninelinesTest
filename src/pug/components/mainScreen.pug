@@ -1,0 +1,30 @@
+section.main-screen
+	.container.flex-wrapper
+		.main-screen__content
+			+lazyPicture({
+			src: `${baseDir}images/Logo.png`,
+			alt: 'Logo',
+			}, [
+			{
+				srcset: `${baseDir}images/Logo.png`,
+			}
+			]).main-screen__logo
+
+			h1
+				p Имя кандидата,
+				p Желаемая позиция
+
+			p Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+		.main-screen__contacts
+			a.contact-link mail@gmail.com
+			a.contact-link +90 535 0868 095
+			a.contact-link г. Фетхие
+			.main-screen__socials
+				a.social
+					+svg("fb")
+				a.social
+					+svg("vk")
+				a.social
+					+svg("tg")
+
+

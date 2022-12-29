@@ -1,0 +1,21 @@
+section.experience
+	.container.flex-wrapper
+
+		.experience__content
+			h2 Опыт работы
+			ul
+				each item in data.experienceScreen.experience
+					+experienceItem(item)
+
+		.experience__content
+			+lazyImage({
+				src: `${baseDir}images/experienceImg.png`,
+				alt: '',
+				appear: false,
+			}).experience__img
+
+		.experience__content
+			h2 Образование
+			ul
+				each item in data.experienceScreen.education
+					+educationItem(item)

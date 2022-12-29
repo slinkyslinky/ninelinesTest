@@ -1,0 +1,7 @@
+// stylelint-disable no-empty-source
+@include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+
+body {
+	font-size: 14px;
+	color: $color-black
+}

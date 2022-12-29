@@ -1,0 +1,9 @@
+mixin educationItem(item)
+	li.education-item
+		.education-item__marks=item.marks
+			+Mark("#FFCD3D","#FFE975","#FFF3B5")
+		h3=item.title
+		.education-item__company
+			span.education-item__company-name=item.companyName + ", "
+			span.education-item__date=item.companyLocation
+

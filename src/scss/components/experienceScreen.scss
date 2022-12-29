@@ -1,0 +1,59 @@
+.experience {
+	h2 {
+		margin: 30px 0;
+	}
+
+	h3 {
+		margin: 0;
+		line-height: 140%;
+	}
+
+	&__img {
+		position: sticky;
+
+		top: 0;
+		left: 0;
+		padding: 30px 0;
+	}
+
+}
+
+.experience-item {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 60px;
+
+
+	&__date {
+		color: $color-gray;
+	}
+
+	&__company-name {
+		font-weight: 600;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: underline;
+	}
+
+}
+
+.education-item {
+	display: flex;
+	flex-direction: column;
+
+	gap: 5px;
+	margin-bottom: 30px;
+	max-width: 190px;
+	text-align: center;
+	padding: 20px;
+
+	.mark {
+		width: 30px;
+		height: 30px;
+	}
+
+
+}
