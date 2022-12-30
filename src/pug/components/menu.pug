@@ -1,0 +1,11 @@
+menu.menu
+	nav
+		ul
+			each object, key in data.header.menu
+				li
+					a.header__link.js-to-anchor(
+						href=object.url
+						data-link=key
+					)
+						!=object.name
+	include littleLine.pug

@@ -8,14 +8,13 @@ section.experience
 					+experienceItem(item)
 
 		.experience__content
-			+lazyImage({
-				src: `${baseDir}images/experienceImg.png`,
-				alt: '',
-				appear: false,
-			}).experience__img
+			img.experience__img(
+				src =`${baseDir}images/experienceImg.png`,
+				alt = '')
 
 		.experience__content
-			h2 Образование
+			h2.h2--centered Образование
 			ul
 				each item in data.experienceScreen.education
 					+educationItem(item)
+		+bigLine(true)

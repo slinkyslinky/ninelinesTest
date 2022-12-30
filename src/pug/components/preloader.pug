@@ -1,0 +1,24 @@
+.preloader
+	img.preloader__img(src=`${baseDir}images/Preloader.png`, alt="")
+	script.
+		const img = document.querySelector(".preloader__img")
+		img.onload = () => {
+			const loadedTime = performance.now()
+			img.classList.add("preloader__img--animated")
+
+			let animationTime = 1 + +(loadedTime / 1800).toFixed(1)
+			if (animationTime >=8) animationTime = 8;
+
+			img.style = `animation-duration: ${animationTime}s`
+
+			setTimeout(() => {
+				const textFade = document.querySelector(".text-fade");
+				console.log(textFade)
+				textFade.classList.add("text-fade--animated")
+				document.querySelector(".preloader").classList.add("preloader--closed")
+				document.querySelector("html").style.overflowY = "auto"
+
+			}, animationTime*1000)
+
+
+		}

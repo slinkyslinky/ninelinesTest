@@ -1,0 +1,21 @@
+.menu {
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	margin: 0;
+	padding: 20px;
+	z-index: 2100;
+}
+
+nav {
+	ul {
+		display: flex;
+		flex-direction: row;
+		gap: 32px;
+		font-size: 18px;
+		font-weight: 700;
+
+	}
+}

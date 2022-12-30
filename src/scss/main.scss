@@ -9,9 +9,15 @@
 @import "base";
 @import "helpers";
 
-@import "components/header";
+
 @import "components/footer";
+@import "components/preloader";
 @import "components/mainScreen";
 @import "components/experienceScreen";
+@import "components/skillsScreen";
+@import "components/menu";
+
+@import "components/littleLine.scss";
+@import "components/bigLine.scss";
 
 @import "pages/home";

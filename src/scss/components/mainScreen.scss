@@ -15,15 +15,28 @@
 	&__contacts {
 		width: 270px;
 		margin-top: 190px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
 
 		.social {
+
 			svg {
-				width: 30px;
-				height: 30px;
+				width: 25px;
+				height: 25px;
+
 			}
 
 		}
 	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+
 
 	.contact-link {
 		display: block;
@@ -34,5 +47,35 @@
 		margin-bottom: 30px;
 	}
 
+
+}
+
+
+.text-fade {
+
+	opacity: 0;
+
+	&--animated {
+		opacity: 1;
+		animation: text-fade 1.5s 1;
+	}
+}
+
+
+
+@keyframes text-fade {
+	0% {
+		transform: translate(0, 200px);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
 
 }

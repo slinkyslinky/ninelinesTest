@@ -1,7 +1,23 @@
-// stylelint-disable no-empty-source
-@include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+// // stylelint-disable no-empty-source
+// @include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+
+@font-face {
+	src: url("../fonts/SFPRODISPLAYREGULAR.woff") format("woff");
+	font-family: "SFPRO";
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/SFPRODISPLAYBOLD.woff") format("woff");
+	font-family: "SFPRO";
+	font-weight: 700;
+	font-style: bold;
+}
+
 
 body {
 	font-size: 14px;
-	color: $color-black
+	color: $color-black;
+	font-family: "SFPRO";
 }

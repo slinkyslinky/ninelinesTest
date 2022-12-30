@@ -1,0 +1,10 @@
+.big-line {
+	position: absolute;
+	bottom: -280px;
+
+	width: calc(100% - 40px);
+}
+
+.big-line--reversed {
+	bottom: -340px;
+}
