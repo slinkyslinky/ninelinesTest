@@ -1,7 +1,7 @@
 mixin educationItem(item)
 	li.education-item
-		.education-item__marks=item.marks
-			+Mark("#FFCD3D","#FFE975","#FFF3B5")
+		.education-item__marks
+			+Mark(item.marks[0][0],item.marks[0][1],item.marks[0][2], false)
 		h3=item.title
 		.education-item__company
 			span.education-item__company-name=item.companyName + ", "

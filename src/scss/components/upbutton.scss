@@ -1,0 +1,49 @@
+.up-button {
+	display: none;
+	position: fixed;
+	bottom: 60px;
+	right: 3%;
+	width: 48px;
+	height: 48px;
+	z-index: 1000;
+
+	background-color: inherit;
+	border: 1px solid $color-red;
+	border-radius: 50%;
+
+	@include devices() {
+		bottom: 30px;
+		right: 20px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 24px;
+		width: 2px;
+		background-color: $color-black;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 50%;
+		border-right: 2px solid $color-black;
+		border-top: 2px solid $color-black;
+		width: 13px;
+		height: 13px;
+		transform: translate(-50%, 0) rotate(-45deg);
+	}
+}
+
+.up-button--active {
+	display: block;
+}
+
+.up-button:hover {
+	background-color: $color-red-transparent;
+}

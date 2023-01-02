@@ -3,8 +3,27 @@
 	bottom: -280px;
 
 	width: calc(100% - 40px);
+
+
+	@include tablet() {
+		width: calc(100% - 120px);
+	}
+
+	@include devices() {
+
+		path {
+			stroke-width: 50px;
+		}
+
+		bottom: -190px
+	}
 }
 
 .big-line--reversed {
 	bottom: -340px;
+
+	@include devices() {
+
+		bottom: -240px
+	}
 }

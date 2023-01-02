@@ -1,4 +1,4 @@
-section.experience
+section.experience#experience
 	.container.flex-wrapper
 
 		.experience__content
@@ -7,10 +7,10 @@ section.experience
 				each item in data.experienceScreen.experience
 					+experienceItem(item)
 
-		.experience__content
-			img.experience__img(
-				src =`${baseDir}images/experienceImg.png`,
-				alt = '')
+
+		img.experience__img(
+			src =`${baseDir}images/experienceImg.png`,
+			alt = '')
 
 		.experience__content
 			h2.h2--centered Образование

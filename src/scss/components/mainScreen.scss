@@ -1,14 +1,24 @@
 .main-screen {
 
-
+	padding-top: 100px;
 
 	&__content {
-		max-width: 560px;
+		max-width: 50%;
+		padding-right: 10px;
+
+		@include devices() {
+			max-width: 100%;
+		}
 	}
 
 	&__logo {
 		width: 150px;
 		height: 150px;
+
+		@include devices() {
+			width: 80px;
+			height: 80px;
+		}
 
 	}
 
@@ -17,8 +27,11 @@
 		margin-top: 190px;
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 15px;
 
+		@include devices() {
+			margin-top: 20px;
+		}
 
 		.social {
 
@@ -43,8 +56,24 @@
 	}
 
 	h1 {
+		font-size: 36px;
 		margin-top: 40px;
 		margin-bottom: 30px;
+		line-height: 1.4;
+
+
+		@include devices() {
+			font-size: 24px;
+		}
+
+	}
+
+	@include tablet() {
+		padding-top: 60px;
+	}
+
+	@include mobile() {
+		padding-top: 20px;
 	}
 
 

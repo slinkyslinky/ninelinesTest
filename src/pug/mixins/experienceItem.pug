@@ -1,11 +1,13 @@
 mixin experienceItem(item)
 	li.experience-item
 		p.experience-item__date=item.date
-		h3=item.title
-		.experience-item__marks=item.marks
+		.experience-item__title
+			h3=item.title
+			each mark in item.marks
+				+Mark(mark[0],mark[1], mark[2], true)
 		.experience-item__company
 			img.experience-item__company-icon(src=item.companyIcon, alt='')
-			span.experience-item__company-name=item.companyName
+			span.experience-item__company-name=`${item.companyName} `
 			span=item.companyLocation
 		p=item.description
 		each link in item.links

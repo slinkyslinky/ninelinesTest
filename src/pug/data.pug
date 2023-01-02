@@ -1,20 +1,29 @@
 -
+	const marks = {
+			violet: ["#AFAAFE", "#928CF8", "#CCC9FD"],
+			yellow: ["#FFE975", "#FFCD3D", "#FFF3B5"],
+			red: ["#FE74A6", "#EE5087", "#FF99BE"],
+			blue: ["#79CAFB", "#4BBEF2", "#C0F0FF"],
+			orange: ["#FFBC89", " #FFA25A", "#FFD5B4"  ],
+			green: ["#66DFBC","#3DC39B", "#7CF5D2"]
+		}
 	const data = {
+
 		header: {
 			links: {
 				logo: 'https://ninelines.agency/',
 			},
 			menu: [
 				{
-					url: '#mainScreen',
+					url: '#main',
 					name: 'Резюме'
 				},
 				{
-					url: '#experienceScreen',
+					url: '#experience',
 					name: 'О себе'
 				},
 				{
-					url: '#skillsScreen',
+					url: '#skills',
 					name: 'Навыки'
 				}
 			]
@@ -38,7 +47,7 @@
 				{
 					date: 'Июль 2019',
 					title: "Freelance Designer",
-					marks: '',
+					marks: [marks.violet, marks.yellow,marks.blue],
 					companyName: '',
 					companyIcon: '',
 					companyLocation: 'Independent Netherlands, Worldwide',
@@ -55,52 +64,108 @@
 					]
 				},
 				{
-					date: '2018-2019',
-					title: "Freelance Designer",
-					marks: '',
-					companyName: 'name ',
+					date: 'Январь 2017 - Сентябрь 2018',
+					title: "Digital Designer",
+					marks: [marks.blue, marks.red],
+					companyName: 'J Creative Solutions',
 					companyIcon: '',
-					companyLocation: 'Independent Netherlands, Worldwide',
-					description: "Available for a project or job in UX/UI, Visual and Product design.",
+					companyLocation: 'Digital agency in Minsk, Belarus',
+					description: "Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations for clients and indoor purposes.",
 					links: [
 						{
-							name:"Commercial tryouts",
+							name:"Agency projects",
 							href:""
 						},
-						{
-							name:"Personal Projects",
-							href:""
-						}
 					]
+				},
+				{
+					date: 'Март 2014 - Февраль 2017',
+					title: "SEO Specialist → Lead SEO Specialist",
+					marks: [marks.orange, marks.blue],
+					companyName: 'OZ.by',
+					companyIcon: '',
+					companyLocation: 'Online bookstore in Minsk, Belarus',
+					description: "Improved website performance and user experience of the biggest online bookstore OZ in Belarus, being a part of the marketing team,I interpreted Google Analytics data to IT, content and marketing colleagues. Advised on tech and content optimization strategy, automated processes, provided reports, increased organic traffic up to 150%.",
+					links: [
+						{
+							name:"Annual company report 2016",
+							href:""
+						},
+					]
+				},
+				{
+					date: 'Август 2012 - Ноябрь 2013',
+					title: "Content Specialist",
+					marks: [marks.orange],
+					companyName: '21vek.by',
+					companyIcon: '',
+					companyLocation: 'E-commerce store in Minsk, Belarus',
+					description: "Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.",
+					links: []
+				},
+				{
+					date: 'Август 2011 - Ноябрь 2014',
+					title: "Software Support Engineer",
+					marks: [marks.green],
+					companyName: 'Integral',
+					companyIcon: '',
+					companyLocation: 'Microelectronics factory in Minsk, Belarus',
+					description: "Supported retail accounting system LS Trade, troubleshoot technical problems.",
+					links: []
 				},
 			],
 			education: [
 				{
-					marks: '',
+					marks: [
+						marks.violet
+					],
 					title: "Interface Design: Web & Mobile",
+					companyName:"IT-Academy",
+					companyLocation: "2020"
+				},
+				{
+					marks: [
+						marks.yellow
+					],
+					title: "Fundamentals of Usability",
+					companyName:"Skillshare",
+					companyLocation: "Oct 2018"
+				},
+				{
+					marks: [
+						marks.red
+					],
+					title: "CG Artist",
 					companyName:"IT-Academy",
 					companyLocation:  "2020"
 				},
 				{
-					marks: '',
-					title: "Interface Design: Web & Mobile",
-					companyName:"IT-Academy",
-					companyLocation:  "2020"
+					marks: [
+						marks.blue
+					],
+					title: "Graphic Design",
+					companyName:"Belarusian State Academy of Arts",
+					companyLocation: "2015 - 2017 Postgraduate Diploma"
 				},
 				{
-					marks: '',
-					title: "Interface Design: Web & Mobile",
-					companyName:"IT-Academy",
-					companyLocation:  "2020"
+					marks: [
+						marks.orange
+					],
+					title: "SEO Specialist",
+					companyName:"ARTOX Media",
+					companyLocation:  "Jun-Aug 2012"
 				},
 				{
-					marks: '',
-					title: "Interface Design: Web & Mobile",
-					companyName:"IT-Academy",
-					companyLocation:  "2020"
-				}
+					marks: [
+						marks.green
+					],
+					title: "IInformation Technology Software",
+					companyName:"Belarusian State University of Informatics and Radioelectronics",
+					companyLocation:  "2011 - 2015 Bachelor’s degree"
+				},
 			]
 		},
+
 		skillsScreen: {
 			skills: [
 				{
@@ -108,20 +173,22 @@
 					text: "Photoshop, Illustrator, InDesign, XD, After Effects"
 				},
 				{
-					title: "Adobe Creative Suite",
-					text: "Photoshop, Illustrator, InDesign, XD, After Effects"
+					title: "Prototyping",
+					text: "Sketch, Figma, InVision, Marvel, Principle, Balsamiq"
 				},
 				{
-					title: "Adobe Creative Suite",
-					text: "Photoshop, Illustrator, InDesign, XD, After Effects"
+					title: "Additional",
+					text: "HTML, CSS, Google Analytics, Keynote, Miro"
 				},
 				{
-					title: "Adobe Creative Suite",
-					text: "Photoshop, Illustrator, InDesign, XD, After Effects"
+					title: "Languages",
+					text: "Conversational English and Native Russian"
 				}
 			]
 		}
 	};
+
+
 
 script.
 	window.data = {

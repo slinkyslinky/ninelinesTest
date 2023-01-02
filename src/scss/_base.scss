@@ -32,6 +32,7 @@ body {
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
 	background-color: $background;
+
 }
 
 main {
@@ -39,7 +40,11 @@ main {
 }
 
 section {
-	margin-bottom: 200px;
+	margin-bottom: 175px;
+
+	@include devices() {
+		margin-bottom: 40px;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -48,8 +53,10 @@ section {
 }
 
 
-p {
+p,
+span {
 	margin: 0;
+	line-height: 1.4;
 }
 
 a,
@@ -149,14 +156,28 @@ iframe {
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
-	width: 100%;
-	max-width: 1180px;
+	width: 82%;
+	max-width: 1440px;
 	padding: 0 20px;
+
+	@include tablet() {
+		padding: 0 60px;
+	}
+
+	@include devices() {
+		width: 100%;
+	}
+
+
 }
 
 .flex-wrapper {
 	display: flex;
 	justify-content: space-between;
+
+	@include devices() {
+		flex-direction: column;
+	}
 }
 
 

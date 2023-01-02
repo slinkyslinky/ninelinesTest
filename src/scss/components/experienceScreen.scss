@@ -1,19 +1,78 @@
 .experience {
 	h2 {
+		font-size: 24px;
 		margin: 30px 0;
+
+		@include devices() {
+			font-size: 20px;
+		}
 	}
 
 	h3 {
 		margin: 0;
 		line-height: 140%;
+		font-size: 14px;
 	}
 
 	&__img {
 		position: sticky;
-
+		display: block;
 		top: 0;
 		left: 0;
-		padding: 30px 0;
+
+		width: 500px;
+		height: 500px;
+		margin: 20px -97px;
+
+		@include devices() {
+			position: relative;
+			margin: 0 auto;
+
+
+		}
+
+		@include tablet() {
+			width: 300px;
+			height: 300px;
+		}
+
+		@include mobile() {
+			width: 200px;
+			height: 200px;
+		}
+
+	}
+
+	&__content {
+		max-width: 47%;
+
+		@include devices() {
+			max-width: 100%;
+		}
+	}
+
+	&__content:nth-child(3) {
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+
+			@include devices() {
+				display: grid;
+
+			}
+
+			@include tablet() {
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: auto;
+			}
+
+			@include mobile() {
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: auto;
+			}
+		}
 	}
 
 }
@@ -23,7 +82,47 @@
 	flex-direction: column;
 	gap: 5px;
 	margin-bottom: 60px;
+	padding-right: 10px;
 
+
+	&__title {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		h3 {
+			margin-right: 8px;
+		}
+
+
+		svg.mark {
+
+			display: block;
+			margin-right: -8px;
+
+			&:nth-child(1) {
+				z-index: 5;
+
+			}
+
+			&:nth-child(2) {
+				z-index: 4;
+			}
+
+			&:nth-child(3) {
+				z-index: 3;
+			}
+
+			&:nth-child(4) {
+				z-index: 2;
+			}
+
+			&:nth-child(5) {
+				z-index: 1;
+			}
+		}
+	}
 
 	&__date {
 		color: $color-gray;
@@ -36,6 +135,14 @@
 	&__link {
 		display: block;
 		text-decoration: underline;
+
+		font-weight: 400;
+		color: #2F80ED;
+
+		&:link,
+		&:visited {
+			color: initial;
+		}
 	}
 
 }
@@ -45,19 +152,27 @@
 	flex-direction: column;
 
 	gap: 5px;
-	margin-bottom: 30px;
+	margin-right: 0;
+	margin-bottom: 40px;
 	max-width: 190px;
 	text-align: center;
-	padding: 20px;
+	padding: 0 20px;
 
-	.mark {
-		width: 30px;
-		height: 30px;
+	@include devices() {
+
+		align-self: start;
+		justify-self: center;
 	}
+
+
 
 
 }
 
 .h2--centered {
 	text-align: center;
+}
+
+.experience__content:nth-child(3) {
+	flex: 0.5 1 auto
 }
