@@ -10,6 +10,7 @@
 	background-color: inherit;
 	border: 1px solid $color-red;
 	border-radius: 50%;
+	backdrop-filter: blur(2px);
 
 	@include devices() {
 		bottom: 30px;

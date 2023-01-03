@@ -1,16 +1,18 @@
-menu.menu
-	nav
-		ul
-			each object, key in data.header.menu
-				li
-					a.header__link.js-to-anchor(
-						href=object.url
-						data-link=key
+header.menu#menu
+	.container
+		nav.nav#nav
+			ul
+				each object, key in data.header.menu
+					li
+						a.header__link.js-to-anchor(
+							href=object.url
+							data-link=key
 
-					)
-						!=object.name
-					include littleLine.pug
-	button.menu__burger
-		span
+						)
+							!=object.name
+						include littleLine.pug
+			img.nav__img(src=`${baseDir}/images/navImg.png`)
+		button.menu__burger#menu__burger
+			span
 
 

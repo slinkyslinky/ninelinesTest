@@ -1,15 +1,16 @@
 .big-line {
 	position: absolute;
 	bottom: -280px;
-
+	z-index: -1;
 	width: calc(100% - 40px);
 
 
 	@include tablet() {
 		width: calc(100% - 120px);
+		bottom: -190px
 	}
 
-	@include devices() {
+	@include mobile() {
 
 		path {
 			stroke-width: 50px;
@@ -22,7 +23,12 @@
 .big-line--reversed {
 	bottom: -340px;
 
-	@include devices() {
+	@include tablet() {
+
+		bottom: -240px
+	}
+
+	@include mobile() {
 
 		bottom: -240px
 	}

@@ -1,25 +1,23 @@
 section.main-screen#main
 	.container.flex-wrapper
-		block content
-			include menu
 		.main-screen__content
 			img.main-screen__logo(src = `${baseDir}images/Logo.png`,alt = 'Logo')
 
 			h1
-				p Имя кандидата,
-				p Желаемая позиция
+				p Котяшкин Илья,
+				p HTML - верстальщик
 
-			p.text-fade Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+			p.text-fade Быстрые, эстетичные и удобные интерфейсы вдохновляют меня, поэтому я занимаюсь Фронтендом. Люблю процесс написания кода и возможность видеть результат. А благодаря усидчивости и способности к быстрому обучению я могу, со временем, разобраться с любой задачей.
 		.main-screen__contacts
-			a.contact-link mail@gmail.com
-			a.contact-link +90 535 0868 095
-			a.contact-link г. Фетхие
+			a.contact-link(href="mailto: slinkislinki@gmail.com" ) slinkislinki@gmail.com
+			a.contact-link(href="Tel: +905350868092" ) +90 535 086 8092
+			span г. Фетхие
 			.main-screen__socials
-				a.social
+				button.social(data-social="fb" )
 					+svg("fb")
-				a.social
+				button.social(data-social="vk" )
 					+svg("vk")
-				a.social
+				button.social(data-social='tg' )
 					+svg("tg")
 		+bigLine()
 

@@ -1,18 +1,31 @@
 .preloader
 	img.preloader__img(src=`${baseDir}images/Preloader.png`, alt="")
 	script.
+
+
+		const visited = document.cookie.match(/Visited=true/)
+
 		const img = document.querySelector(".preloader__img")
+
+
+
 		img.onload = () => {
 			const loadedTime = performance.now()
 
 
 			let animationTime = 1 + +(loadedTime / 1800).toFixed(1)
 			if (animationTime >=8) animationTime = 8;
+			if (visited) {
 
+				animationTime = 0;
+			}
 			img.style = `animation-duration: ${animationTime}s`
 			img.classList.add("preloader__img--animated")
-			console.log(animationTime)
-			const now = Date.now()
+
+
+
+
+
 
 			setTimeout(() => {
 				const textFade = document.querySelector(".text-fade");
@@ -20,7 +33,6 @@
 				document.querySelector(".preloader").classList.add("preloader--closed");
 				document.querySelector("html").style.overflowY = "auto";
 
-				console.log(Date.now() - now)
 			}, (animationTime )*1000)
 
 		}
