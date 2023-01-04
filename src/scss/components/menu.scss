@@ -1,5 +1,4 @@
 .menu {
-
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -7,12 +6,6 @@
 	margin: 0;
 	margin-right: 20px;
 	z-index: 2100;
-
-
-
-
-
-
 }
 
 
@@ -35,8 +28,6 @@
 		display: block;
 	}
 
-
-
 	&::before,
 	span,
 	&::after {
@@ -50,7 +41,6 @@
 	}
 
 	&::before {
-
 		top: 0;
 	}
 
@@ -63,16 +53,10 @@
 		transition: opacity ease 0.2s 0.2s;
 		bottom: 0;
 	}
-
-
 }
 
 .menu__burger--opened {
-
-
-
 	span {
-
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) rotateZ(-45deg);
@@ -91,11 +75,9 @@
 }
 
 nav {
-
 	position: absolute;
 	top: 100px;
 	right: 0;
-	overflow: hidden;
 
 
 	@include devices() {
@@ -107,7 +89,7 @@ nav {
 		background-color: $background;
 		transform: translate(0, -100%);
 		transition: transform ease 0.5s;
-
+		overflow: hidden;
 	}
 
 	ul {
@@ -122,15 +104,12 @@ nav {
 		}
 
 		@include devices() {
-
 			flex-direction: column;
 			width: fit-content;
 			align-items: center;
 			font-size: 26px;
 			gap: 40px;
-
 		}
-
 	}
 
 	li:hover {
@@ -138,11 +117,6 @@ nav {
 			opacity: 1;
 		}
 	}
-
-
-
-
-
 }
 
 .nav--opened {
@@ -151,20 +125,16 @@ nav {
 
 .nav__img {
 	display: none;
-
+	position: relative;
+	left: 50%;
+	top: 10%;
+	width: 80%;
+	max-width: 400px;
+	transform: translateX(-50%);
 
 	@include devices() {
 		display: block;
 	}
-
-	position: relative;
-	left:50%;
-	top: 10%;
-	width: 80%;
-	max-width: 400px;
-
-	transform: translateX(-50%);
-
 }
 
 
@@ -173,7 +143,6 @@ nav {
 	top: -95px;
 	left: -25px;
 	z-index: -1;
-
 	opacity: 0;
 	transition: opacity 0.4s ease;
 }

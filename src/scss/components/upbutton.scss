@@ -1,15 +1,14 @@
 .up-button {
-	display: none;
 	position: fixed;
-	bottom: 60px;
+	display: none;
 	right: 3%;
+	bottom: 60px;
 	width: 48px;
 	height: 48px;
 	z-index: 1000;
-
-	background-color: inherit;
 	border: 1px solid $color-red;
 	border-radius: 50%;
+	background-color: inherit;
 	backdrop-filter: blur(2px);
 
 	@include devices() {
@@ -18,25 +17,25 @@
 	}
 
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
-		top: 50%;
 		left: 50%;
+		top: 50%;
 		transform: translate(-50%, -50%);
-		height: 24px;
 		width: 2px;
+		height: 24px;
 		background-color: $color-black;
 	}
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
-		top: 12px;
 		left: 50%;
-		border-right: 2px solid $color-black;
-		border-top: 2px solid $color-black;
+		top: 12px;
 		width: 13px;
 		height: 13px;
+		border-top: 2px solid $color-black;
+		border-right: 2px solid $color-black;
 		transform: translate(-50%, 0) rotate(-45deg);
 	}
 }

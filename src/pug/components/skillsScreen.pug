@@ -1,9 +1,6 @@
-section.skills-screen#skills
+section.skills-screen#skills(data-scroll-section)
 	.container
 		h2 Навыки
 		ul.flex-wrapper
 			each item in data.skillsScreen.skills
 				+skillsItem(item)
-
-
-

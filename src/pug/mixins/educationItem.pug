@@ -4,6 +4,5 @@ mixin educationItem(item)
 			+Mark(item.marks[0][0],item.marks[0][1],item.marks[0][2], false)
 		h3=item.title
 		.education-item__company
-			span.education-item__company-name=item.companyName + ", "
+			span.education-item__company-name= item.companyName + ", "
 			span.education-item__date=item.companyLocation
-

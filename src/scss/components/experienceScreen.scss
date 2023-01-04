@@ -1,7 +1,7 @@
 .experience {
 	h2 {
-		font-size: 24px;
 		margin: 30px 0;
+		font-size: 24px;
 
 		@include devices() {
 			font-size: 20px;
@@ -10,25 +10,23 @@
 
 	h3 {
 		margin: 0;
-		line-height: 140%;
 		font-size: 14px;
+		line-height: 140%;
 	}
 
 	&__img {
 		position: sticky;
-		display: block;
-		top: 0;
 		left: 0;
-
+		top: 0;
+		display: block;
+		margin: 20px -97px;
 		width: 500px;
 		height: 500px;
-		margin: 20px -97px;
+
 
 		@include devices() {
 			position: relative;
 			margin: 0 auto;
-
-
 		}
 
 		@include tablet() {
@@ -40,7 +38,6 @@
 			width: 200px;
 			height: 200px;
 		}
-
 	}
 
 	&__content {
@@ -54,13 +51,12 @@
 	&__content:nth-child(3) {
 		ul {
 			display: flex;
+			flex: 0.5 1 auto;
 			flex-direction: column;
 			align-items: center;
 
-
 			@include devices() {
 				display: grid;
-
 			}
 
 			@include tablet() {
@@ -74,19 +70,17 @@
 			}
 		}
 	}
-
 }
 
 .experience-item {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
 	margin-bottom: 60px;
 	padding-right: 10px;
+	gap: 5px;
 
 
 	&__title {
-
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -95,15 +89,12 @@
 			margin-right: 8px;
 		}
 
-
 		svg.mark {
-
 			display: block;
 			margin-right: -8px;
 
 			&:nth-child(1) {
 				z-index: 5;
-
 			}
 
 			&:nth-child(2) {
@@ -128,51 +119,51 @@
 		color: $color-gray;
 	}
 
+	&__company {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__company-icon {
+		width: 30px;
+		height: 30px;
+	}
+
 	&__company-name {
 		font-weight: 600;
 	}
 
 	&__link {
 		display: block;
-		text-decoration: underline;
-
 		font-weight: 400;
-		color: #2F80ED;
+		text-decoration: underline;
+		color: #2f80ed;
 
 		&:link,
 		&:visited {
 			color: initial;
 		}
 	}
-
 }
 
 .education-item {
 	display: flex;
 	flex-direction: column;
-
-	gap: 5px;
 	margin-right: 0;
 	margin-bottom: 40px;
 	max-width: 190px;
-	text-align: center;
+	gap: 5px;
 	padding: 0 20px;
+	text-align: center;
 
 	@include devices() {
-
 		align-self: start;
 		justify-self: center;
 	}
-
-
-
-
 }
 
 .h2--centered {
 	text-align: center;
-}
-
-.experience__content:nth-child(3) {
-	flex: 0.5 1 auto
 }

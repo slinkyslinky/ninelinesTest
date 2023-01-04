@@ -1,10 +1,9 @@
 .main-screen {
-
 	padding-top: 100px;
 
 	&__content {
-		max-width: 50%;
 		padding-right: 10px;
+		max-width: 50%;
 
 		@include devices() {
 			max-width: 100%;
@@ -19,14 +18,13 @@
 			width: 80px;
 			height: 80px;
 		}
-
 	}
 
 	&__contacts {
-		width: 270px;
-		margin-top: 190px;
 		display: flex;
 		flex-direction: column;
+		margin-top: 190px;
+		width: 270px;
 		gap: 15px;
 
 		@include devices() {
@@ -34,15 +32,13 @@
 		}
 
 		.social {
-			background: none;
 			border: none;
+			background: none;
 
 			svg {
 				width: 25px;
 				height: 25px;
-
 			}
-
 		}
 	}
 
@@ -58,16 +54,14 @@
 	}
 
 	h1 {
-		font-size: 36px;
 		margin-top: 40px;
 		margin-bottom: 30px;
+		font-size: 36px;
 		line-height: 1.4;
-
 
 		@include devices() {
 			font-size: 24px;
 		}
-
 	}
 
 	@include tablet() {
@@ -77,13 +71,10 @@
 	@include mobile() {
 		padding-top: 20px;
 	}
-
-
 }
 
 
 .text-fade {
-
 	opacity: 0;
 
 	&--animated {
@@ -96,8 +87,8 @@
 
 @keyframes text-fade {
 	0% {
-		transform: translate(0, 200px);
 		opacity: 0;
+		transform: translate(0, 200px);
 	}
 
 	50% {
@@ -105,8 +96,7 @@
 	}
 
 	100% {
-		transform: translate(0, 0);
 		opacity: 1;
+		transform: translate(0, 0);
 	}
-
 }

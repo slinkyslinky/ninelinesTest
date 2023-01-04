@@ -4,19 +4,17 @@
 	z-index: -1;
 	width: calc(100% - 40px);
 
-
 	@include tablet() {
+		bottom: -190px;
 		width: calc(100% - 120px);
-		bottom: -190px
 	}
 
 	@include mobile() {
+		bottom: -190px;
 
 		path {
 			stroke-width: 50px;
 		}
-
-		bottom: -190px
 	}
 }
 
@@ -24,12 +22,10 @@
 	bottom: -340px;
 
 	@include tablet() {
-
-		bottom: -240px
+		bottom: -240px;
 	}
 
 	@include mobile() {
-
-		bottom: -240px
+		bottom: -240px;
 	}
 }

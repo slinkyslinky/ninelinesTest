@@ -1,7 +1,7 @@
-section.main-screen#main
+section.main-screen#main(data-scroll-section)
 	.container.flex-wrapper
 		.main-screen__content
-			img.main-screen__logo(src = `${baseDir}images/Logo.png`,alt = 'Logo')
+			img.main-screen__logo(src=`${baseDir}images/Logo.png` alt = "Logo")
 
 			h1
 				p Котяшкин Илья,
@@ -9,15 +9,14 @@ section.main-screen#main
 
 			p.text-fade Быстрые, эстетичные и удобные интерфейсы вдохновляют меня, поэтому я занимаюсь Фронтендом. Люблю процесс написания кода и возможность видеть результат. А благодаря усидчивости и способности к быстрому обучению я могу, со временем, разобраться с любой задачей.
 		.main-screen__contacts
-			a.contact-link(href="mailto: slinkislinki@gmail.com" ) slinkislinki@gmail.com
-			a.contact-link(href="Tel: +905350868092" ) +90 535 086 8092
+			a.contact-link(href="mailto: slinkislinki@gmail.com") slinkislinki@gmail.com
+			a.contact-link(href="Tel: +905350868092") +90 535 086 8092
 			span г. Фетхие
 			.main-screen__socials
-				button.social(data-social="fb" )
+				button.social(data-social="fb")
 					+svg("fb")
-				button.social(data-social="vk" )
+				button.social(data-social="vk")
 					+svg("vk")
-				button.social(data-social='tg' )
+				button.social(data-social="tg")
 					+svg("tg")
 		+bigLine()
-

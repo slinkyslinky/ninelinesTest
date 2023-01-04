@@ -16,7 +16,7 @@ block vars
 		}
 	-
 		var body = {
-			attrs: {},
+			attrs: { },
 			classList: []
 		}
 	-
@@ -278,7 +278,7 @@ html(class=html.classList)&attributes(html.attrs)
 		block styles
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
-	body(class=body.classList)&attributes(body.attrs)
+	body(class=body.classList  data-scroll-container)&attributes(body.attrs)
 		block bdy-start
 		block content
 		block scripts
